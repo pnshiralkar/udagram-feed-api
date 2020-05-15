@@ -13,8 +13,8 @@ before_script:
   - npm run build
 
 script:
-  - docker build . -t pnshiralkar/udagram-feed
+  - docker build . -t pnshiralkar/udagram-feed-api
 
 after_success:
   - echo $DOCKER_PASSWORD | docker login -u $DOCKER_PASSWORD --password-stdin
-  - docker push pnshiralkar/udagram-feed
+  - docker push pnshiralkar/udagram-feed-api
